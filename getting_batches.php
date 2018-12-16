@@ -6,7 +6,7 @@
   
  require_once('db_connect.php');
  
- $sql = "select * from employer where faculty  ='$faculty' ";
+ $sql = "select * from batches where faculty  ='$faculty' ";
  
  $check = mysqli_fetch_array(mysqli_query($con,$sql));
  
@@ -19,3 +19,12 @@
  }else{
  echo "error try again";
  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
