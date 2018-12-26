@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
 $connection = mysqli_connect("localhost","root","","pstu")
 or die("Error " . mysqli_error($connection));
 
-$sql = "select * from employer";
+$sql = "select * from course_schedule";
 $result = mysqli_query($connection, $sql)
 or die("Error in Selecting " . mysqli_error($connection));
 
@@ -20,31 +20,28 @@ if( $num_of_res > 0) {
     $response['success'] = true;
     $response['message'] = $num_of_res . ' result(s) found';
     
-    $employers = array();
+    $course_schedules = array();
     while($row = mysqli_fetch_array($result))
     {
-        $employer = array();
+        $course_schedule = array();
         
-        $employer['id'] = $row['id'];
-        $employer['name'] = $row['name'];
-        $employer['designation'] = $row['designation'];
+        $course_schedule['id'] = $row['id'];
+        $course_schedule['course_code'] = $row['course_code'];
+        $course_schedule['course_title'] = $row['course_title'];
        
-        $employer['phone'] = $row['phone'];
+        $course_schedule['credit_hour'] = $row['credit_hour'];
        
+     
         
-        
-         $employer['department'] = $row['department'];
-         $employer['phone'] = $row['phone'];
-         $employer['address'] = $row['address'];
-        
-        $employer['faculty'] = $row['faculty'];
+        $course_schedule['faculty'] = $row['faculty'];
+         $course_schedule['status'] = $row['status'];
        
-        $employer['image_url'] = $row['image_url'];
       
-        array_push($employers,$employer);
+      
+        array_push($course_schedules,$course_schedule);
     }
     
-    $response['employers'] = $employers;
+    $response['course_schedules'] = $course_schedules;
 }  else {
     $response['message'] = 'No data found';
 }
