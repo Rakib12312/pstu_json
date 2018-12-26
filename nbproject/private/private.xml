@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/xampp/htdocs/pstu_json/get_teachers.php</file>
-            <file>file:/C:/xampp/htdocs/pstu_json/index.php</file>
-            <file>file:/C:/xampp/htdocs/pstu_json/get_students.php</file>
-            <file>file:/C:/xampp/htdocs/pstu_json/get_employee.php</file>
-            <file>file:/C:/xampp/htdocs/pstu_json/db_connect.php</file>
-            <file>file:/C:/xampp/htdocs/pstu_json/student_show.php</file>
-            <file>file:/C:/xampp/htdocs/pstu_json/getting_course_schedule.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
